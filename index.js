@@ -228,8 +228,8 @@ const artists = [
 (1) Name of the first artist (0th index) in the array
 (2) Bio of the third artist (2nd index) in the array */
 
-console.log(artists[0]);
-console.log(artists[2]);
+console.log(artists[0].name);
+console.log(artists[2].bio);
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
@@ -304,17 +304,18 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-const addArtist = [...artists];
-addArtist.push({
-  id: 20,
-  name: "Monika",
-  years: "1997 - current",
-  genre: "Artist",
-  nationality: "Lithuanian",
-  bio: "Hello",
-});
-
-console.log(addArtist);
+function addArtist(array) {
+  array.push({
+    id: 20,
+    name: "Monika",
+    years: "1997 - current",
+    genre: "Artist",
+    nationality: "Lithuanian",
+    bio: "Hello",
+  });
+  return array;
+}
+console.log(addArtist(artists));
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
