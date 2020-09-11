@@ -246,7 +246,11 @@ console.log(correctedArtists);
  * it will return `The artist at index 0 is Amedeo Modigliani`.
  */
 function getArtistByIndex(array, index) {
-  /* code here */
+  const clonedArr = [...array];
+  const source = clonedArr[index];
+  return `The artist at index ${source.id} is ${source.name}`;
+}
+console.log(getArtistByIndex(artists, 4));
 }
 
 /**

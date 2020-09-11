@@ -205,6 +205,8 @@ button:hover {
   width: 100%;
 }
 
+/* Responsive code starts here */
+
 @media (max-width: 500px) {
   header nav {
     display: flex;
@@ -230,5 +232,9 @@ button:hover {
     background-size: cover;
     height: 40vh;
     opacity: 80%;
+  }
+  h1 {
+    font-size: 4.2rem;
+    font-weight: bold;
   }
 }
