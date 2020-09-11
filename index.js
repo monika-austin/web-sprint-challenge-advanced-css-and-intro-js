@@ -245,16 +245,13 @@ console.log(correctedArtists);
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
  */
+
 function getArtistByIndex(array, index) {
   const clonedArr = [...array];
   const source = clonedArr[index];
   return `The artist at index ${source.id} is ${source.name}`;
 }
 console.log(getArtistByIndex(artists, 4));
-}
-
-/**
-
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
@@ -307,9 +304,17 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */) {
-  /* Code here */
-}
+const addArtist = [...artists];
+addArtist.push({
+  id: 20,
+  name: "Monika",
+  years: "1997 - current",
+  genre: "Artist",
+  nationality: "Lithuanian",
+  bio: "Hello",
+});
+
+console.log(addArtist);
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -319,9 +324,18 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */) {
-  /* Code here */
+function lotsOfArt(array) {
+  const lotsOfArt = [...array];
+
+  let artistsName = [];
+  for (let i = 0; i < lotsOfArt.length; i++) {
+    if (lotsOfArt[i].paintings > 100) {
+      artistsName.push(lotsOfArt[i].name);
+    }
+  }
+  return artistsName;
 }
+console.log(lotsOfArt(artists));
 
 // 🎨🎨 STRETCH 🎨🎨//
 
